@@ -1,8 +1,8 @@
 import $api from "../http";
 
 export default class AuthService {
-    static async createMessage() {
-        return $api.post(`/message`);
+    static async createMessage(msgInfo) {
+        return $api.post(`/message`, msgInfo);
     }
 
     static async getMessages(chatId = 0) {
